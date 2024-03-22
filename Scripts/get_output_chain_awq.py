@@ -1,7 +1,5 @@
 import argparse
 from vllm import LLM, SamplingParams
-
-
 from tqdm import tqdm
 
 # Create an ArgumentParser object and define the arguments

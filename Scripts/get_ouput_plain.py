@@ -1,6 +1,3 @@
-# In[2]:
-
-
 from xturing.models import BaseModel
 import jsonlines
 from tqdm import tqdm

@@ -1,7 +1,4 @@
 import argparse
-
-
-
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
 

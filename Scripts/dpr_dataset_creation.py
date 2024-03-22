@@ -1,5 +1,3 @@
-
-
 from transformers import BertTokenizer
 import spacy
 from sentence_transformers import SentenceTransformer
