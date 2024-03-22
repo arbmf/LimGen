@@ -1,0 +1,71 @@
+base_model: daryl149/llama-2-7b-chat-hf
+model_type: LlamaForCausalLM
+tokenizer_type: LlamaTokenizer
+is_llama_derived_model: true
+
+load_in_8bit: true
+load_in_4bit: false
+strict: false
+
+datasets:
+  - path: "/workspace/train.jsonl"
+    type:
+      # The below are defaults. only set what's needed.
+      field_input: input
+      field_output: limitations
+      field_instruction: instruction
+      format: |-
+        Input: {instruction} {input}
+        Limitations:
+val_set_size: 0
+output_dir: ./lora-out-full
+
+sequence_len: 4096
+sample_packing: true
+pad_to_sequence_len: true
+
+adapter: lora
+lora_model_dir:
+lora_r: 32
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - v_proj
+lora_fan_in_fan_out: false
+dataset_prepared_path: ./last_run_dataset_full
+wandb_project: finetuning_lora_llama2_full_axolotl_2epoch
+wandb_entity:
+wandb_watch:
+wandb_name:
+wandb_log_model: save_steps
+
+gradient_accumulation_steps: 1
+micro_batch_size: 2
+num_epochs: 3
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.00005
+
+train_on_inputs: false
+group_by_length: false
+bf16: true
+fp16: false
+tf32: false
+
+gradient_checkpointing: true
+logging_steps: 1
+xformers_attention: false
+flash_attention: true
+
+warmup_steps: 50
+saves_per_epoch: 1
+debug:
+deepspeed: "./axolotl/deepspeed/zero1.json"
+weight_decay: 0.01
+fsdp:
+fsdp_config:
+special_tokens:
+  bos_token: "<s>"
+  eos_token: "</s>"
+  unk_token: "<unk>"
