@@ -1,6 +1,6 @@
 ## Dataset Source
 
-The LimGen dataset in this project is sourced from the [ACL Anthology](https://aclanthology.org/).
+The LimGen dataset in this project is sourced from the [ACL Anthology](https://aclanthology.org/) license information for the same is [here](https://aclanthology.org/faq/).
 
 ## License
 
