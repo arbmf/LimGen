@@ -1,7 +1,7 @@
 # LimGen
 
 ## Overview
-This repository includes the LimGen dataset under Datasets/ and scripts for limitation generation model fine-tuning and generation.
+This repository includes the LimGen dataset under Datasets folder and code in the Scripts folder for limitation generation model fine-tuning and generation.
 We shall be updating the repo with readme and any source updates.
 
 The dataset used in this project is sourced from the [ACL Anthology](https://aclanthology.org/).
