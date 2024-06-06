@@ -15,6 +15,6 @@ The code in this repository, located in the `Scripts` folder, is licensed under 
 
 ### Dataset License
 
-The dataset in this repository, located in the `Datasets` folder, is licensed under the Creative Commons 4.0 BY (Attribution) license. For detailed information, please refer to the `LICENSE` file available in this folder.
+The dataset in this repository, located in the `Datasets` folder, is licensed by ACL Anthology under the Creative Commons 4.0 BY (Attribution) license. For detailed information, please refer to the `LICENSE` file available in this folder.
 
 Each folder contains its respective license file for more details.
